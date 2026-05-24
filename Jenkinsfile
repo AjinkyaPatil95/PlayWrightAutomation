@@ -6,7 +6,7 @@ pipeline {
         stage('Clone') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/USERNAME/REPO.git'
+                url: 'https://github.com/AjinkyaPatil95/PlayWrightAutomation.git'
             }
         }
 
