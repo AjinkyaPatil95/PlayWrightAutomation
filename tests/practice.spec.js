@@ -1,7 +1,7 @@
 
 import {test} from '@playwright/test';
 
-test.only('Practice test', async ({ page }) => {
+test('Practice test', async ({ page }) => {
     const email= 'ajinkyapatil5@gmail.com';
     const pass= 'Radha@1008'
     const cont= '8421065995'
