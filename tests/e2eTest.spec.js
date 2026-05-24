@@ -61,8 +61,8 @@ test.only('Practice test', async ({ page }) => {
     }
     await page.locator('.action__submit').click();
     await expect(page.locator('.hero-primary')).toHaveText(' Thankyou for the order. ');
-    const orderID = await page.locator('.em-spacer-1 .ng-star-inserted').textContent();
-    console.log(orderID);
+    const newOrderID = await page.locator('.em-spacer-1 .ng-star-inserted').textContent();
+    console.log(newOrderID);
 
     await page.locator("button[routerlink*='myorder']").click();
     await page.locator('.table').waitFor();
@@ -70,7 +70,7 @@ test.only('Practice test', async ({ page }) => {
 
     for(let i=0; i< await row.count(); i++){
         const rowOrderId = await row.locator('th').nth(i).textContent();
-        if(orderID.includes(rowOrderId)){
+        if(newOrderID.includes(rowOrderId)){
             await row.locator('button').first().click();
             break;
         }
