@@ -28,6 +28,6 @@ test('Practice test', async ({ page }) => {
     await page.locator('#userEmail').fill(email);
     await accessKey.fill(pass);
     await page.locator('#login').click();
-    await console.log(await page.locator('.card-body b').first().textContent());
+    await console.log(await page.locator('.card-body b').first().textContent()); 
 }
 ) 
